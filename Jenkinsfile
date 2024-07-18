@@ -1,5 +1,8 @@
 pipeline {
-    agent any 
+    agent any
+    tools {
+  dockerTool 'mydocker'
+    }
         stages {
             stage("Checkout SCM") {
                 steps {
